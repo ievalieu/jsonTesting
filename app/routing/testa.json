@@ -1,0 +1,32 @@
+{
+	"attorney":	[
+			{
+				"question": "<div class=\"form-group\"><label for=\"propertyType\">I am a/an:<\/label> <button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Individual<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Property Management<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Related Person<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Business<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Attorney<\/button></div>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"attorneyName\">My name is:<\/label><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"First Name\"><\/div><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\"><\/div>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"plantiffName\">The plantiff's name is <\/label><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"First Name\"><\/div><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\"><\/div>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"XXXXXXXXXX\">The plantiff's relationship to the property in question is as the <\/label><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Owner<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Other<\/button>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"XXXXXXXXXX\">and I need to process and deliver eviction paperwork to evict a/an <\/label><button class=\"btn btn-primary defendent\" id=\"INPUT ID\">Individual<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Business<\/button>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"defendantName\">and the defendant's name: <\/label><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"First Name\"><\/div><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\"><\/div>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"defendantName\">and the business's name: <\/label><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"First Name\"><\/div><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\"><\/div>"
+			},
+			{
+				"question": "<div class=\"form-group\"><label for=\"XXXXXXXXXX\">and what type of property? <\/label><button class=\"btn btn-primary defendant\" id=\"INPUT ID\">Residential<\/button><button class=\"btn btn-primary defendant\" id=\"INPUT ID\">Commercial<\/button>"
+			}
+	]
+}
+
+
+
+
