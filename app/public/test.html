@@ -26,14 +26,18 @@
         	var questions = {}
         	$.getJSON("/json", function(data) {
         		
-        		questions = data.attorney;
+        		// questions = data.attorney;
+                questions = data.case;
         		
+
+                // Automatically create new button for each question in a given array
         		for(var i=0; i < questions.length; i++) {
         			var newBtn = $(`<button type=\"button\" class=\"btn btn-success\" data-word=\"${i}\">`);
         			newBtn.text(`Question ${i}`);
         			$(".test").prepend(newBtn);
         		}
 
+                // populates HTML with json file information based on which button was clicked
         		$(".btn").on("click", function(){
     			    console.log("i was clicked");
     			    event.preventDefault();
