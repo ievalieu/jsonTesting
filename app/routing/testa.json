@@ -1,99 +1,216 @@
 {
 	"case":	[
 			{
-				"question": "I am a/an:",
-				"input": "<button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Individual<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Property Management<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Related Person<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Business<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Attorney<\/button>"
+				"question": "<label>I am a/an:<\/label>",
+				"input": "button",
+				"class": "form-control btn btn-primary ",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
 			},
 			{
-				"question": "My name is...",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"First Name\"><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\">"
+				"question": "<label>My name is...<\/label>",
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["firstName", "lastName"],
+				"type": "text",
+				"text": "null"
 			},
 			{
-				"question": "What is the defendant's name?", 
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"First Name\"><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\">"
+				"question": "<label>What is the defendant's name?<\/label>", 
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["firstName", "lastName"],
+				"type": "text",
+				"text": "null"
 			},
 			{
-				"question": "What is the name of the business?",
-				"input":  "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"First Name\"><input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Last Name\">"
+				"question": "<label>What is the name of the business?<\/label>",
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["Business Name"],
+				"type": "text",
+				"text": "null"
 			},
 			{
 				"question": "What type of property is the notice for?",
-				"input": "<button class=\"btn btn-primary defendant\" id=\"YYYYYYYY\">Residential<\/button><button class=\"btn btn-primary defendant\" id=\"INPUT ID\">Commercial<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary ",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Residential", "Commercial"]
 			},
 			{
 				"question": "Address Line 1",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"street address, P.O. box\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["street address, P.O. box"],
+				"type": "text",
+				"text": "null"
 			},
 			{
 				"question": "Address Line 2",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"apartment, suite, unit...\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["apartment, suite, unit..."],
+				"type": "text",
+				"text": "null"
 			},
 			{
 				"question": "State",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"state\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["state"],
+				"type": "text",
+				"text": "null"
+
 			},
 			{
 				"question": "Zipcode \/ Postal Code",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"zip \/ postal code\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["zip \/ postal code"],
+				"type": "text",
+				"text": "null"
+
 			},
 			{
 				"question": "They owe rent in the amount of:",
-				"input": "<span class=\"input-group-addon\">$<\/span><input type=\"number\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"$\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["$"],
+				"type": "number",
+				"text": "null"
 			},
 			{
 				"question": "From the period",
-				"input": "<input type=\"date\" class=\"form-control\" id=\"YYYYYYYY\"><input type=\"date\" class=\"form-control\" id=\"YYYYYYYY\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["", ""],
+				"type": "date",
+				"text": "null"
 			},
 			{
 				"question": "Would you like to file for punitive damages?",
-				"input": "<button class=\"btn btn-primary \" id=\"YYYYYYYY\">Yes<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">No<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Yes", "No"]
 			},
 			{
 				"question": "Does this eviction have to do with drugs?",
-				"input": "<button class=\"btn btn-primary \" id=\"YYYYYYYY\">Yes<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">No<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Yes", "No"]
 			},
 			{
 				"question": "Has the tenant been notified of their eviction with a written notice?",
-				"input": "<button class=\"btn btn-primary \" id=\"YYYYYYYY\">Yes<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">No<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Yes", "No"]
 			},
 			{
 				"question":"Select the type of notice to send to the tenet",
-				"input": "<button class=\"btn btn-primary \" id=\"YYYYYYYY\">Notice to Pay or Quit<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">Notice to Quit<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Notice to Pay or Quit", "Notice to Quit"]
 			},
 			{
 				"question": "How long would you like to give them notice?",
-				"input": "<button class=\"btn btn-primary \" id=\"YYYYYYYY\">3 Days<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">30 Days<\/button><button class=\"btn btn-primary\" id=\"YYYYYYYY\">60 Days<\/button><input type=\"number\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"Specify length\">"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["3 Days", "30 Days", "60 Days", "Other"]
 			},
 			{
 				"question": "When would you like to receive notice?",
-				"input": "<input type=\"date\" class=\"form-control\" id=\"YYYYYYYY\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": [""],
+				"type": "date",
+				"text": "null"
 			},
 			{
 				"question": "Who should the payment be made to?",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"name of person, business , property management \">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["name of person, business , property management "],
+				"type": "text",
+				"text": "null"
 			}
 	],
 
 	"attorney": [
 			{
-				"question": "Will you need to process and deliver eviction paperwork to evict an Individual or Business?",
-				"input": "<\/label><button class=\"btn btn-primary defendent\" id=\"YYYYYYYY\">Individual<\/button><button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Business<\/button>"
+				"question": "Will you need to process and deliver eviction paperwork?",
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Yes", "No"]
 			},
 			{
 				"question": "The plantiff I am representing is a:",
-				"input": "<button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Individual<\/button><button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Property Management<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Related Person<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Business<\/button><button class=\"btn btn-primary plantiff\" id=\"INPUT ID\">Attorney<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
 			},
 			{
 				"question": "What is the plantiff's name?",
-				"input": "<input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"First Name\"><input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"Last Name\">"
+				"input": "input",
+				"class": "form-control",
+				"id": "YYYYYY",
+				"placeholder": ["firstName", "lastName"],
+				"type": "text",
+				"text": "null"
 			},
 			{
 				"question": "What is the plantiff's relationship to the property?",
-				"input": "<button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Owner<\/button><button class=\"btn btn-primary plantiff\" id=\"YYYYYYYY\">Other<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Owner", "Other"]
 			},
 			{
 				"question": "Would the plantiff like to file for punitive damages?",
-				"input": "<button class=\"btn btn-primary defendant\" id=\"YYYYYYYY\">Yes<\/button><button class=\"btn btn-primary defendant\" id=\"YYYYYYYY\">No<\/button>"
+				"input": "button",
+				"class": "form-control btn btn-primary",
+				"id": "YYYYYY",
+				"placeholder": "null",
+				"type": "button",
+				"text": ["Yes", "No"]
 			}
 	]
 }	

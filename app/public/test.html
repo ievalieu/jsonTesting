@@ -6,7 +6,7 @@
         <title>Test JSON</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
 	<body>
@@ -46,8 +46,7 @@
         		// 	newBtn.text(`Question ${i}`);
         		// 	$(".test").prepend(newBtn);
         		// }
-
-
+            
         // *** populates HTML with json file information based on which button was clicked ***
                 // $(".btn").on("click", function(){
                 //     console.log("i was clicked");
@@ -73,34 +72,80 @@
 
         // ^^^  Gives one question at a time when NEXT BUTTON clicked AND deletes old question!!  ^^^
                 $(".case").on("click", function changeCase() {
-                    $(".test").html("");
-                    $(".input").html("");
+                    $(".test").empty();
+                    $(".input").empty();
                     if(numCase < endCase){
-                        console.log("i was clicked");
                         event.preventDefault();
                         $(".test").append(questionsCase[numCase].question);
-                        $(".input").append(questionsCase[numCase].input);
+                        // $(".input").append(questionsCase[numCase].input);
+                        newInputMech(numCase, questionsCase);
                         numCase++;    
                     }
                 });
 
 
                 $(".attorney").on("click", function changeAttorney() {
-                    $(".test").html("");
-                    $(".input").html("");
+                    $(".test").empty();
+                    $(".input").empty();
+
                     if(numAttorney < endAttorney){
-                        console.log("i was clicked");
                         event.preventDefault();
                         $(".test").append(questionsAttorney[numAttorney].question);
-                        $(".input").append(questionsAttorney[numAttorney].input);
+                        // $(".input").append(questionsAttorney[numAttorney].input);
+                        newInputMech(numAttorney, questionsAttorney);
                         numAttorney++;    
                     }
                 });
 
 
-
-
     		}); //End of getJSON
+
+
+            function newInputMech(iteration, dataSubset){
+
+                switch (dataSubset[iteration].input){
+                    case "input":
+                        newUserInput(iteration, dataSubset);
+                        break;
+                    case "button":
+                        newUserButton(iteration, dataSubset);
+                        break;
+                }
+            };
+
+
+
+
+            function newUserInput(i, dataSubset){
+
+                var inputQty = dataSubset[i].placeholder;
+                for(var z = 0; z < inputQty.length; z++){
+                    var newInput = $("<input>");
+                        newInput.attr({
+                            type: dataSubset[i].type,
+                            id: dataSubset[i].id,
+                            "class": dataSubset[i].class,
+                            placeholder: dataSubset[i].placeholder[z]
+                        });
+                        $(".input").append(newInput);
+                }
+            };
+
+            function newUserButton(i, dataSubset){
+
+                var btnQty = dataSubset[i].text;
+                for(var y = 0; y < btnQty.length; y++){
+                    var newBtn = $(`<button><span> ${btnQty[y]} </span></button`);
+                    newBtn.attr({
+                        type: dataSubset[i].type,
+                        id: dataSubset[i].id,
+                        "class": dataSubset[i].class
+                    });
+                    $(".input").append(newBtn);
+                }
+            };
+
+
     	}); //End of doc.ready
 
         </script>
