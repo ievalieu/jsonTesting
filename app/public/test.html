@@ -13,10 +13,17 @@
 		
 
 	<div class="container">
-
-		<div class="test">
-			
+        
+        <div class="next_case">
+            <button class="btn case" type="submit">Next Case</button>
+        </div>
+        <div class="next_attorney">
+            <button class="btn attorney" type="submit">Next Attorney</button>
+        </div>
+		<div class="test" style="background-color: orange">
 		</div>
+        <div class="input" style="background-color: yellow">
+        </div>
 
 	</div>
 
@@ -26,30 +33,76 @@
         	var questions = {}
         	$.getJSON("/json", function(data) {
         		
-        		// questions = data.attorney;
-                questions = data.case;
-        		
+        		questionsAttorney = data.attorney;
+                questionsCase = data.case;
+                var endCase = questionsCase.length;
+                var endAttorney = questionsAttorney.length;
+        		var numCase = 0;
+                var numAttorney = 0;
 
-                // Automatically create new button for each question in a given array
-        		for(var i=0; i < questions.length; i++) {
-        			var newBtn = $(`<button type=\"button\" class=\"btn btn-success\" data-word=\"${i}\">`);
-        			newBtn.text(`Question ${i}`);
-        			$(".test").prepend(newBtn);
-        		}
+        // *** Automatically create new button for each question in a given array ***
+        		// for(var i=0; i < questions.length; i++) {
+        		// 	var newBtn = $(`<button type=\"button\" class=\"btn btn-success\" data-word=\"${i}\">`);
+        		// 	newBtn.text(`Question ${i}`);
+        		// 	$(".test").prepend(newBtn);
+        		// }
 
-                // populates HTML with json file information based on which button was clicked
-        		$(".btn").on("click", function(){
-    			    console.log("i was clicked");
-    			    event.preventDefault();
-    			    var num = $(this).data("word");
-    			    $(".test").append(questions[num]);
-    		    });
-    		});
 
-    	});
+        // *** populates HTML with json file information based on which button was clicked ***
+                // $(".btn").on("click", function(){
+                //     console.log("i was clicked");
+                //     event.preventDefault();
+                //     var num = $(this).data("word");
+                //     $(".test").append(questions[num]);
+                //     });
+                // });
+
+
+                
+        // $$$ Gives one question at a time when NEXT BUTTON clicked $$$
+        		// $(".btn").on("click", function changeQuestion() {
+          //           if(num < end){
+          //               console.log("i was clicked");
+          //               event.preventDefault();
+          //               $(".test").append(questions[num].question);
+          //               $(".input").append(questions[num].input);
+          //               num++;    
+          //           }
+          //       });
+
+
+        // ^^^  Gives one question at a time when NEXT BUTTON clicked AND deletes old question!!  ^^^
+                $(".case").on("click", function changeCase() {
+                    $(".test").html("");
+                    $(".input").html("");
+                    if(numCase < endCase){
+                        console.log("i was clicked");
+                        event.preventDefault();
+                        $(".test").append(questionsCase[numCase].question);
+                        $(".input").append(questionsCase[numCase].input);
+                        numCase++;    
+                    }
+                });
+
+
+                $(".attorney").on("click", function changeAttorney() {
+                    $(".test").html("");
+                    $(".input").html("");
+                    if(numAttorney < endAttorney){
+                        console.log("i was clicked");
+                        event.preventDefault();
+                        $(".test").append(questionsAttorney[numAttorney].question);
+                        $(".input").append(questionsAttorney[numAttorney].input);
+                        numAttorney++;    
+                    }
+                });
+
+
+
+
+    		}); //End of getJSON
+    	}); //End of doc.ready
 
         </script>
-
-        
     </body>
 </html>

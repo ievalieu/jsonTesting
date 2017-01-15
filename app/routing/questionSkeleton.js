@@ -46,11 +46,22 @@
 
 <div class=\"form-group\"><label for=\"XXXXXXXXXX\"><\/label>
 <input type=\"text\" class=\"form-control\" id=\"YYYYYYYY\" placeholder=\"\"><\/div>
-<button class=\"btn btn-primary defendant\" id=\"YYYYYYYY\">
+
+<div class=\"form-group\"><label for=\"XXXXXXXXXX\"><\/label>
+<button class=\"btn btn-primary defendant\" id=\"YYYYYYYY\"><\/button>
+
+
 // <div class="form-group">
 // 	<label for="">Name:</label>
 // 	<input type="button" class="form-control" id="" placeholder="">
 // </div>
+
+// address
+
+
+
+	
+
 
 
 // JSON / Object Creation
