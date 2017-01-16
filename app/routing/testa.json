@@ -3,7 +3,7 @@
 		{
 			"question": "<label>I am a/an:<\/label>",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -21,7 +21,7 @@
 		{
 			"question": "<label>My relationship to the property in question is as<\/label>",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "text",
@@ -30,7 +30,7 @@
 		{
 			"question": "<label>I would like to evict a/an<\/label>",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "text",
@@ -48,7 +48,7 @@
 		{
 			"question": "What type of property is the notice for?",
 			"input": "button",
-			"class": "form-control btn btn-primary ",
+			"class": "btn btn-primary ",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -122,7 +122,7 @@
 		{
 			"question": "Would you like to file for punitive damages?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -131,7 +131,7 @@
 		{
 			"question": "Does this eviction have to do with drugs?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -144,7 +144,7 @@
 		{
 			"question": "<label>I am a/an:<\/label>",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -163,7 +163,7 @@
 		{
 			"question": "The plantiff I am representing is a:",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -181,7 +181,7 @@
 		{
 			"question": "What is the plantiff's relationship to the property?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -190,7 +190,7 @@
 		{
 			"question": "Will you need to process and deliver eviction paperwork?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -199,7 +199,7 @@
 		{
 			"question": "What type of property is the notice for?",
 			"input": "button",
-			"class": "form-control btn btn-primary ",
+			"class": "btn btn-primary ",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -273,7 +273,7 @@
 		{
 			"question": "Would the plantiff like to file for punitive damages?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -282,7 +282,7 @@
 		{
 			"question": "Does this eviction have to do with drugs?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -294,7 +294,7 @@
 		{
 			"question": "Has the tenant been notified of their eviction with a written notice?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -303,7 +303,7 @@
 		{
 			"question":"Select the type of notice you sent to the tenant:",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -312,7 +312,7 @@
 		{
 			"question": "How long did you give them notice?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -321,7 +321,7 @@
 		{
 			"question": "Did you serve the tenant the notice by personally handing it to them?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -366,7 +366,7 @@
 		{
 			"question": "You posted a copy of the notice on the premises because:",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -377,14 +377,14 @@
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
-			"placeholder": "null",
+			"placeholder": [""],
 			"type": "date",
 			"text": "null"
 		},
 		{
 			"question": "Did you serve the tenant the notice in a manner specified in a written commercial lease between the parties?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -395,7 +395,7 @@
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
-			"placeholder": "null",
+			"placeholder": [""],
 			"type": "file",
 			"text": "null"
 		},
@@ -404,7 +404,7 @@
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
-			"placeholder": "null",
+			"placeholder": [""],
 			"type": "file",
 			"text": "null"
 		}
@@ -414,7 +414,7 @@
 		{
 			"question": "Has the tenant been notified of their eviction with a written notice?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -423,7 +423,7 @@
 		{
 			"question": "Select the type of notice to send to the tenant",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -432,7 +432,7 @@
 		{
 			"question": "How long would you like to give them notice?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -534,7 +534,7 @@
 		{
 			"question": "Was the contract agreement written or oral?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -543,7 +543,7 @@
 		{
 			"question": "Who agreed to the contract with the tenant?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -552,7 +552,7 @@
 		{
 			"question": "What type of tenacy did the contract allow?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -570,7 +570,7 @@
 		{
 			"question": "Did the original contract for tenancy include attorney fees?",
 			"input": "button",
-			"class": "form-control",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -612,7 +612,7 @@
 		{
 			"question": "Would you like to file for punitive damages?",
 			"input": "button",
-			"class": "form-control btn btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",

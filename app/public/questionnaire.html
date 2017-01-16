@@ -35,8 +35,21 @@
                     <div class="row question">
                         <p>Tell us about yourself! We need to know more about you to send you to the right questionnaire.</p>
                     </div>
-                    <div class="row input"></div>
-                    <div class="row backNext"></div>
+                    <div class="row input btn-group"></div>
+                    <div class="row backNext">
+                        <div class="next_case" style= "display: inline-block;">
+                            <button class="btn case" type="submit">Next Case</button>
+                        </div>
+                        <div class="next_sent" style= "display: inline-block;">
+                            <button class="btn sent" type="submit">Next Sent</button>
+                        </div>
+                        <div class="next_not_sent" style= "display: inline-block;">
+                            <button class="btn not_sent" type="submit">Next Not Sent</button>
+                        </div>
+                        <div class="next_attorney" style= "display: inline-block; float: right">
+                            <button class="btn attorney" type="submit">Next Attorney</button>
+                        </div>             
+                    </div>
                     <div class="test"></div>
                 </div>
             </div>
@@ -48,30 +61,119 @@
             </div>
         </div><!--/Content Row-->
     </div>
-    <script>
+  <script>
         $(document).ready(function(){
-            
+
             var questions = {}
             $.getJSON("/json", function(data) {
                 
-                questions = data.attorney;
-                
-                for(var i=0; i < questions.length; i++) {
-                    var newBtn = $(`<button type=\"button\" class=\"btn btn-success\" data-word=\"${i}\">`);
-                    newBtn.text(`Question ${i}`);
-                    $(".test").prepend(newBtn);
-                }
+                questionsAttorney = data.attorney;
+                questionsCase = data.case;
+                questionsSentNotice = data.sentNotice;
+                questionsNotSentNotice = data.notSentNotice;
+                var endCase = questionsCase.length;
+                var endAttorney = questionsAttorney.length;
+                var endSent = questionsSentNotice.length;
+                var endNotSent = questionsNotSentNotice.length;
+                var numCase = 0;
+                var numAttorney = 0;  
+                var numSent = 0;
+                var numNotSent = 0;
 
-                $(".btn").on("click", function(){
-                    console.log("i was clicked");
-                    event.preventDefault();
-                    var num = $(this).data("word");
-                    $(".test").append(questions[num]);
+
+                $(".case").on("click", function changeCase() {
+                    $(".question").empty();
+                    $(".input").empty();
+                    if(numCase < endCase){
+                        event.preventDefault();
+                        $(".question").append(questionsCase[numCase].question);
+                        newInputMech(numCase, questionsCase);
+                        numCase++;    
+                    }
                 });
-            });
 
-        });
 
-        </script>    
+                $(".attorney").on("click", function changeAttorney() {
+                    $(".question").empty();
+                    $(".input").empty();
+
+                    if(numAttorney < endAttorney){
+                        event.preventDefault();
+                        $(".question").append(questionsAttorney[numAttorney].question);
+                        newInputMech(numAttorney, questionsAttorney);
+                        numAttorney++;    
+                    }
+                });
+
+                $(".sent").on("click", function changeSent() {
+                    $(".question").empty();
+                    $(".input").empty();
+                    if(numSent < endSent){
+                        event.preventDefault();
+                        $(".question").append(questionsSentNotice[numSent].question);
+                        newInputMech(numSent, questionsSentNotice);
+                        numSent++;    
+                    }
+                });
+
+                $(".not_sent").on("click", function changeSent() {
+                    $(".question").empty();
+                    $(".input").empty();
+                    if(numNotSent < endNotSent){
+                        event.preventDefault();
+                        $(".question").append(questionsNotSentNotice[numNotSent].question);
+                        newInputMech(numNotSent, questionsNotSentNotice);
+                        numNotSent++;    
+                    }
+                });
+
+
+
+            }); //End of getJSON
+
+            function newInputMech(iteration, dataSubset){
+
+                switch (dataSubset[iteration].input){
+                    case "input":
+                        newUserInput(iteration, dataSubset);
+                        break;
+                    case "button":
+                        newUserButton(iteration, dataSubset);
+                        break;
+                }
+            };
+
+
+            function newUserInput(i, dataSubset){
+
+                var inputQty = dataSubset[i].placeholder;
+                for(var z = 0; z < inputQty.length; z++){
+                    var newInput = $("<input>");
+                        newInput.attr({
+                            type: dataSubset[i].type,
+                            id: dataSubset[i].id,
+                            "class": dataSubset[i].class,
+                            placeholder: dataSubset[i].placeholder[z]
+                        });
+                        $(".input").append(newInput);
+                }
+            };
+            function newUserButton(i, dataSubset){
+
+                var btnQty = dataSubset[i].text;
+                for(var y = 0; y < btnQty.length; y++){
+                    var newBtn = $(`<button><span> ${btnQty[y]} </span></button`);
+                    newBtn.attr({
+                        type: dataSubset[i].type,
+                        id: dataSubset[i].id,
+                        "class": dataSubset[i].class
+                    });
+                    $(".input").append(newBtn);
+                }
+            };
+
+        }); //End of doc.ready
+
+    </script> 
 </body>
 </html>
