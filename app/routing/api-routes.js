@@ -5,6 +5,6 @@ var tableQueue = [];
 module.exports = (app)=>{
 
     app.get("/json", function(req, res) {
-        res.sendFile(path.join(__dirname, "test.json"));
+        res.sendFile(path.join(__dirname, "testa.json"));
     });
 };
