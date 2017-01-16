@@ -40,15 +40,18 @@
                         <div class="next_case" style= "display: inline-block;">
                             <button class="btn case" type="submit">Next Case</button>
                         </div>
+                        <div class="next_attorney" style= "display: inline-block;">
+                            <button class="btn attorney" type="submit">Next Attorney</button>
+                        </div>
                         <div class="next_sent" style= "display: inline-block;">
                             <button class="btn sent" type="submit">Next Sent</button>
                         </div>
                         <div class="next_not_sent" style= "display: inline-block;">
                             <button class="btn not_sent" type="submit">Next Not Sent</button>
                         </div>
-                        <div class="next_attorney" style= "display: inline-block; float: right">
-                            <button class="btn attorney" type="submit">Next Attorney</button>
-                        </div>             
+                        <div class="next_tenacy" style= "display: inline-block;">
+                            <button class="btn tenancyContract" type="submit">Next Tenancy Contract</button>
+                        </div>       
                     </div>
                     <div class="test"></div>
                 </div>
@@ -67,25 +70,31 @@
             var questions = {}
             $.getJSON("/json", function(data) {
                 
-                questionsAttorney = data.attorney;
                 questionsCase = data.case;
-                questionsSentNotice = data.sentNotice;
-                questionsNotSentNotice = data.notSentNotice;
-                var endCase = questionsCase.length;
-                var endAttorney = questionsAttorney.length;
-                var endSent = questionsSentNotice.length;
-                var endNotSent = questionsNotSentNotice.length;
                 var numCase = 0;
-                var numAttorney = 0;  
+                var endCase = questionsCase.length;
+
+                questionsAttorney = data.attorney;
+                var numAttorney = 0; 
+                var endAttorney = questionsAttorney.length;
+
+                questionsSentNotice = data.sentNotice;
                 var numSent = 0;
+                var endSent = questionsSentNotice.length;
+
+                questionsNotSentNotice = data.notSentNotice;
                 var numNotSent = 0;
+                var endNotSent = questionsNotSentNotice.length;
+                
+                questionsTenancy = data.tenancyContract;
+                var numTenancyContract = 0; 
+                var endTenancyContract = questionsTenancy.length;
 
 
                 $(".case").on("click", function changeCase() {
-                    $(".question").empty();
-                    $(".input").empty();
                     if(numCase < endCase){
                         event.preventDefault();
+                        insertQestion(numCase, questionsCase);
                         newInputMech(numCase, questionsCase);
                         numCase++;    
                     }
@@ -93,35 +102,42 @@
 
 
                 $(".attorney").on("click", function changeAttorney() {
-                    $(".question").empty();
-                    $(".input").empty();
-
                     if(numAttorney < endAttorney){
                         event.preventDefault();
+                        insertQestion(numAttorney, questionsAttorney);
                         newInputMech(numAttorney, questionsAttorney);
                         numAttorney++;    
                     }
                 });
 
                 $(".sent").on("click", function changeSent() {
-                    $(".question").empty();
-                    $(".input").empty();
                     if(numSent < endSent){
                         event.preventDefault();
+                        insertQestion(numSent, questionsSentNotice);
                         newInputMech(numSent, questionsSentNotice);
                         numSent++;    
                     }
                 });
 
                 $(".not_sent").on("click", function changeNotSent() {
-                    $(".question").empty();
-                    $(".input").empty();
                     if(numNotSent < endNotSent){
                         event.preventDefault();
+                        insertQestion(numNotSent, questionsNotSentNotice);
                         newInputMech(numNotSent, questionsNotSentNotice);
                         numNotSent++;    
                     }
                 });
+
+                $(".tenancyContract").on("click", function changeCase() {
+                    if(numTenancyContract < endTenancyContract){
+                        event.preventDefault();
+                        insertQestion(numTenancyContract, questionsTenancy);
+                        newInputMech(numTenancyContract, questionsTenancy);
+                        numTenancyContract++;    
+                    }
+                });
+
+
             }); //End of getJSON
 
 
@@ -137,20 +153,20 @@
                 }
             };
 
-
-            function newUserInput(i, dataSubset){
-
+            function insertQestion(i, dataSubset){
+                $(".question").empty();
                 var inputQuestion = dataSubset[i].question;
-                var inputQty = dataSubset[i].placeholder;
-
                 var newLabel = $(`<label>${inputQuestion}</label>`);
                     newLabel.attr({
                         for: dataSubset[i].id,
                     });
                     $(".question").append(newLabel);
+            };
 
+            function newUserInput(i, dataSubset){
+                $(".input").empty();
+                var inputQty = dataSubset[i].placeholder;
                 for(var z = 0; z < inputQty.length; z++){
-
                     var newInput = $("<input>");
                         newInput.attr({
                             type: dataSubset[i].type,
@@ -162,15 +178,8 @@
                 }
             };
             function newUserButton(i, dataSubset){
-                var btnQuestion = dataSubset[i].question;
+                $(".input").empty();
                 var btnQty = dataSubset[i].text;
-
-                var newLabel = $(`<label>${btnQuestion}</label>`);
-                    newLabel.attr({
-                        for: dataSubset[i].id,
-                    });
-                    $(".question").append(newLabel);
-
                 for(var y = 0; y < btnQty.length; y++){
                     var newBtn = $(`<button><span> ${btnQty[y]} </span></button`);
                     newBtn.attr({

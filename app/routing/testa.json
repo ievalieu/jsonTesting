@@ -534,7 +534,7 @@
 		{
 			"question": "Was the contract agreement written or oral?",
 			"input": "button",
-			"class": "btn-primary",
+			"class": "btn btn-primary",
 			"id": "YYYYYY",
 			"placeholder": "null",
 			"type": "button",
@@ -563,7 +563,7 @@
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
-			"placeholder": "frequency",
+			"placeholder": ["frequency"],
 			"type": "number",
 			"text": "null"
 		},
@@ -581,7 +581,7 @@
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
-			"placeholder": "null",
+			"placeholder": [""],
 			"type": "file",
 			"text": "null"
 		}
