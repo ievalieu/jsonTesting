@@ -1,217 +1,623 @@
 {
 	"case":	[
-			{
-				"question": "<label>I am a/an:<\/label>",
-				"input": "button",
-				"class": "form-control btn btn-primary ",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
-			},
-			{
-				"question": "<label>My name is...<\/label>",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["firstName", "lastName"],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "<label>What is the defendant's name?<\/label>", 
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["firstName", "lastName"],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "<label>What is the name of the business?<\/label>",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["Business Name"],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "What type of property is the notice for?",
-				"input": "button",
-				"class": "form-control btn btn-primary ",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Residential", "Commercial"]
-			},
-			{
-				"question": "Address Line 1",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["street address, P.O. box"],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "Address Line 2",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["apartment, suite, unit..."],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "State",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["state"],
-				"type": "text",
-				"text": "null"
+		{
+			"question": "<label>I am a/an:<\/label>",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
+		},
+		{
+			"question": "<label>My name is...<\/label>",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["firstName", "lastName"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "<label>My relationship to the property in question is as<\/label>",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "text",
+			"text": ["Owner", "Other"]
+		},
+		{
+			"question": "<label>I would like to evict a/an<\/label>",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "text",
+			"text": ["Individual", "Business"]
+		},
+		{
+			"question": "<label>What is the defendant's name?<\/label>", 
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["firstName", "lastName"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "What type of property is the notice for?",
+			"input": "button",
+			"class": "form-control btn btn-primary ",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Residential", "Commercial"]
+		},
+		{
+			"question": "Address Line 1",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["street address, P.O. box"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "Address Line 2",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["apartment, suite, unit..."],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "State",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["state"],
+			"type": "text",
+			"text": "null"
 
-			},
-			{
-				"question": "Zipcode \/ Postal Code",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["zip \/ postal code"],
-				"type": "text",
-				"text": "null"
+		},
+		{
+			"question": "Zipcode \/ Postal Code",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["zip \/ postal code"],
+			"type": "text",
+			"text": "null"
 
-			},
-			{
-				"question": "They owe rent in the amount of:",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["$"],
-				"type": "number",
-				"text": "null"
-			},
-			{
-				"question": "From the period",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["", ""],
-				"type": "date",
-				"text": "null"
-			},
-			{
-				"question": "Would you like to file for punitive damages?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Yes", "No"]
-			},
-			{
-				"question": "Does this eviction have to do with drugs?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Yes", "No"]
-			},
-			{
-				"question": "Has the tenant been notified of their eviction with a written notice?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Yes", "No"]
-			},
-			{
-				"question":"Select the type of notice to send to the tenet",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Notice to Pay or Quit", "Notice to Quit"]
-			},
-			{
-				"question": "How long would you like to give them notice?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["3 Days", "30 Days", "60 Days", "Other"]
-			},
-			{
-				"question": "When would you like to receive notice?",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": [""],
-				"type": "date",
-				"text": "null"
-			},
-			{
-				"question": "Who should the payment be made to?",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["name of person, business , property management "],
-				"type": "text",
-				"text": "null"
-			}
+		},
+		{
+			"question": "They owe rent in the amount of:",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["$"],
+			"type": "number",
+			"text": "null"
+		},
+		{
+			"question": "From the period beginning",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "to the period ending",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "Would you like to file for punitive damages?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "Does this eviction have to do with drugs?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		}
+			
 	],
 
 	"attorney": [
-			{
-				"question": "Will you need to process and deliver eviction paperwork?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Yes", "No"]
-			},
-			{
-				"question": "The plantiff I am representing is a:",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
-			},
-			{
-				"question": "What is the plantiff's name?",
-				"input": "input",
-				"class": "form-control",
-				"id": "YYYYYY",
-				"placeholder": ["firstName", "lastName"],
-				"type": "text",
-				"text": "null"
-			},
-			{
-				"question": "What is the plantiff's relationship to the property?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Owner", "Other"]
-			},
-			{
-				"question": "Would the plantiff like to file for punitive damages?",
-				"input": "button",
-				"class": "form-control btn btn-primary",
-				"id": "YYYYYY",
-				"placeholder": "null",
-				"type": "button",
-				"text": ["Yes", "No"]
-			}
+		{
+			"question": "<label>I am a/an:<\/label>",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
+		},
+		{
+			"question": "<label>My name is...<\/label>",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["firstName", "lastName"],
+			"type": "text",
+			"text": "null"
+		},
+		
+		{
+			"question": "The plantiff I am representing is a:",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
+		},
+		{
+			"question": "What is the plantiff's name?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["firstName", "lastName"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "What is the plantiff's relationship to the property?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Owner", "Other"]
+		},
+		{
+			"question": "Will you need to process and deliver eviction paperwork?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "What type of property is the notice for?",
+			"input": "button",
+			"class": "form-control btn btn-primary ",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Residential", "Commercial"]
+		},
+		{
+			"question": "Address Line 1",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["street address, P.O. box"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "Address Line 2",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["apartment, suite, unit..."],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "State",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["state"],
+			"type": "text",
+			"text": "null"
+
+		},
+		{
+			"question": "Zipcode \/ Postal Code",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["zip \/ postal code"],
+			"type": "text",
+			"text": "null"
+
+		},
+		{
+			"question": "They owe rent in the amount of:",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["$"],
+			"type": "number",
+			"text": "null"
+		},
+		{
+			"question": "From the period beginning",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "to the period ending",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "Would the plantiff like to file for punitive damages?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "Does this eviction have to do with drugs?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		}	
+	],
+
+	"sentNotice": [
+		{
+			"question": "Has the tenant been notified of their eviction with a written notice?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question":"Select the type of notice you sent to the tenant:",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Notice to Pay or Quit", "Notice to Quit"]
+		},
+		{
+			"question": "How long did you give them notice?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["3 Days", "30 Days", "60 Days", "Other"]
+		},
+		{
+			"question": "Did you serve the tenant the notice by personally handing it to them?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "When did the tenant receive the notice?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "How did you server the notice to the tenant? You may choose more than one option",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "checkbox",
+			"text": ["Sent a copy by certified or registered mail addressed to the tenant", "left a copy of the notice with a person of suitable age and discretion", "Posted a copy of the notice on the premises"]
+		},
+		{
+			"question": "When did you serve a copy of the notice to this person? (POS Mail Acknowledgement date)",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "What is the name or description of the person you left a copy of the notice with?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["name or description"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "You posted a copy of the notice on the premises because:",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Tenant's residence and usual place of business could not be confirmed", "No person of suitable age or discretion could be found there"]
+		},
+		{
+			"question": "When did you post a copy of the notice on the premises? (POS Post on Door Date)",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "Did you serve the tenant the notice in a manner specified in a written commercial lease between the parties?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "Please upload a copy of the notice sent to the tenant",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "file",
+			"text": "null"
+		},
+		{
+			"question": "Please upload a copy of the proof of service for the notice sent to the tenant",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "file",
+			"text": "null"
+		}
+	],
+
+	"notSentNotice": [
+		{
+			"question": "Has the tenant been notified of their eviction with a written notice?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "Select the type of notice to send to the tenant",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Notice to Pay or Quit", "Notice to Quit"]
+		},
+		{
+			"question": "How long would you like to give them notice?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["3 Days", "30 Days", "60 Days", "Other"]
+		},
+		{
+			"question": "When would you like the tenant to receive the notice?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "Who should the payment be made to?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["name of person, business , property management "],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "Address Line 1",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["street address, P.O. box"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "Address Line 2",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["apartment, suite, unit..."],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "State",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["state"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "Zipcode \/ Postal Code",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["zip \/ postal code"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "What is the name of your point of contact for delivery of payment?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["name of person, business , property management "],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "What is the phone number of your point of contact?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["phone number"],
+			"type": "tel",
+			"text": "null"
+		},
+		{
+			"question": "What are the available times for delivery of payment?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["Hours of operation"],
+			"type": "text",
+			"text": "null"
+		}
+	],
+
+	"tenancyContract": [
+		{
+			"question": "When was the start of the original contract date for tenacy?",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": [""],
+			"type": "date",
+			"text": "null"
+		},
+		{
+			"question": "Was the contract agreement written or oral?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Written", "Oral"]
+		},
+		{
+			"question": "Who agreed to the contract with the tenant?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Plaintiff", "Plaintiff's Agent", "Plaintiff's Predecessor in Interest", "Other"]
+		},
+		{
+			"question": "What type of tenacy did the contract allow?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Month-to-Month", "Other"]
+		},
+		{
+			"question": "<label>What was the frequency of tenancy?<\/label>",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "frequency",
+			"type": "number",
+			"text": "null"
+		},
+		{
+			"question": "Did the original contract for tenancy include attorney fees?",
+			"input": "button",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		},
+		{
+			"question": "Please upload a copy of the contract sent to the tenant",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "file",
+			"text": "null"
+		}
+	],
+
+	"businessConditional": [
+		{
+			"question": "<label>The name of your business?<\/label>",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["Business Name"],
+			"type": "text",
+			"text": "null"
+		},
+		{
+			"question": "<label>What is the name of the business?<\/label>",
+			"input": "input",
+			"class": "form-control",
+			"id": "YYYYYY",
+			"placeholder": ["Business Name"],
+			"type": "text",
+			"text": "null"
+		}
+	],
+
+	"IndividualConditional": [
+		{
+			"question": "Would you like to file for punitive damages?",
+			"input": "button",
+			"class": "form-control btn btn-primary",
+			"id": "YYYYYY",
+			"placeholder": "null",
+			"type": "button",
+			"text": ["Yes", "No"]
+		}
 	]
 }	
 
