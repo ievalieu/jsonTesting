@@ -14,11 +14,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static("app/public"));
+app.use(express.static("app/public/css"));
 // Sets up the Express app to handle data parsing
 
 require("./app/routing/api-routes")(app);
 require("./app/routing/html-routes")(app);
+
+//Sets up the view engine to ejs
+app.set("view engine", "ejs");
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="questionnaire.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Header-->
+        <div class="row">
+            <div class="header">
+                <a href="#">
+                    <img id="evictya-logo" alt="Brand" src="../public/assets/evictya_logo.png">
+                    <p class="evictya">EvictYa</p>
+                </a>
+            </div>
+        </div>
+        <!--Content Row-->
+        <div class="row content">
+            <!--Tool-tip Containers-->
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <div class="tool-tip"></div>
+                <div class="tool-tip"></div>
+                <div class="tool-tip"></div>
+            </div>
+            <!--Questionnaire Container-->
+            <div class="col-sm-8 col-md-8 col-lg-8">
+                <div class="questionnaire-container">
+                    <div class="row question">
+                        <p>Tell us about yourself! We need to know more about you to send you to the right questionnaire.</p>
+                    </div>
+                    <div class="row input btn-group"></div>
+                    <div class="row backNext">
+                        <div class="next_case" style= "display: inline-block;">
+                            <button class="btn case" type="submit">Next Case</button>
+                        </div>
+                        <div class="next_attorney" style= "display: inline-block;">
+                            <button class="btn attorney" type="submit">Next Attorney</button>
+                        </div>
+                        <div class="next_sent" style= "display: inline-block;">
+                            <button class="btn sent" type="submit">Next Sent</button>
+                        </div>
+                        <div class="next_not_sent" style= "display: inline-block;">
+                            <button class="btn not_sent" type="submit">Next Not Sent</button>
+                        </div>
+                        <div class="next_tenacy" style= "display: inline-block;">
+                            <button class="btn tenancyContract" type="submit">Next Tenancy Contract</button>
+                        </div>       
+                    </div>
+                    <div class="test"></div>
+                </div>
+            </div>
+            <!--Tool-tip Containers-->
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <div class="tool-tip"></div>
+                <div class="tool-tip"></div>
+                <div class="tool-tip"></div>
+            </div>
+        </div><!--/Content Row-->
+    </div>
+  <script>
+        $(document).ready(function(){
+
+            var questions = {}
+            $.getJSON("/json", function(data) {
+                
+                questionsCase = data.case;
+                var numCase = 0;
+                var endCase = questionsCase.length;
+
+                questionsAttorney = data.attorney;
+                var numAttorney = 0; 
+                var endAttorney = questionsAttorney.length;
+
+                questionsSentNotice = data.sentNotice;
+                var numSent = 0;
+                var endSent = questionsSentNotice.length;
+
+                questionsNotSentNotice = data.notSentNotice;
+                var numNotSent = 0;
+                var endNotSent = questionsNotSentNotice.length;
+                
+                questionsTenancy = data.tenancyContract;
+                var numTenancyContract = 0; 
+                var endTenancyContract = questionsTenancy.length;
+
+
+                $(".case").on("click", function changeCase() {
+                    if(numCase < endCase){
+                        event.preventDefault();
+                        insertQestion(numCase, questionsCase);
+                        newInputMech(numCase, questionsCase);
+                        numCase++;    
+                    }
+                });
+
+
+                $(".attorney").on("click", function changeAttorney() {
+                    if(numAttorney < endAttorney){
+                        event.preventDefault();
+                        insertQestion(numAttorney, questionsAttorney);
+                        newInputMech(numAttorney, questionsAttorney);
+                        numAttorney++;    
+                    }
+                });
+
+                $(".sent").on("click", function changeSent() {
+                    if(numSent < endSent){
+                        event.preventDefault();
+                        insertQestion(numSent, questionsSentNotice);
+                        newInputMech(numSent, questionsSentNotice);
+                        numSent++;    
+                    }
+                });
+
+                $(".not_sent").on("click", function changeNotSent() {
+                    if(numNotSent < endNotSent){
+                        event.preventDefault();
+                        insertQestion(numNotSent, questionsNotSentNotice);
+                        newInputMech(numNotSent, questionsNotSentNotice);
+                        numNotSent++;    
+                    }
+                });
+
+                $(".tenancyContract").on("click", function changeCase() {
+                    if(numTenancyContract < endTenancyContract){
+                        event.preventDefault();
+                        insertQestion(numTenancyContract, questionsTenancy);
+                        newInputMech(numTenancyContract, questionsTenancy);
+                        numTenancyContract++;    
+                    }
+                });
+
+
+            }); //End of getJSON
+
+
+            function newInputMech(iteration, dataSubset){
+
+                switch (dataSubset[iteration].input){
+                    case "input":
+                        newUserInput(iteration, dataSubset);
+                        break;
+                    case "button":
+                        newUserButton(iteration, dataSubset);
+                        break;
+                }
+            };
+
+            function insertQestion(i, dataSubset){
+                $(".question").empty();
+                var inputQuestion = dataSubset[i].question;
+                var newLabel = $(`<label>${inputQuestion}</label>`);
+                    newLabel.attr({
+                        for: dataSubset[i].id,
+                    });
+                    $(".question").append(newLabel);
+            };
+
+            function newUserInput(i, dataSubset){
+                $(".input").empty();
+                var inputQty = dataSubset[i].placeholder;
+                for(var z = 0; z < inputQty.length; z++){
+                    var newInput = $("<input>");
+                        newInput.attr({
+                            type: dataSubset[i].type,
+                            id: dataSubset[i].id,
+                            "class": dataSubset[i].class,
+                            placeholder: dataSubset[i].placeholder[z]
+                        });
+                        $(".input").append(newInput);
+                }
+            };
+            function newUserButton(i, dataSubset){
+                $(".input").empty();
+                var btnQty = dataSubset[i].text;
+                for(var y = 0; y < btnQty.length; y++){
+                    var newBtn = $(`<button><span> ${btnQty[y]} </span></button`);
+                    newBtn.attr({
+                        type: dataSubset[i].type,
+                        id: dataSubset[i].id,
+                        "class": dataSubset[i].class
+                    });
+                    $(".input").append(newBtn);
+                }
+            };
+
+        }); //End of doc.ready
+
+    </script> 
+</body>
+</html>

@@ -58,7 +58,7 @@ body, html{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
     padding: 5px 5px;
 }
-img{
+#evictya-logo{
 	height: 35px;
 	width: 35px;
 	float: left;
@@ -83,6 +83,7 @@ img{
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.5);
 }
 .question{
+	border: 1px solid blue;
 	height: 150px;
 	padding: 30px 50px 30px 50px;
 	text-align: center;
@@ -90,7 +91,9 @@ img{
 	font-family: Helvetica;
 }
 .input{
+	border: 1px solid pink;
 	height: 400px;
+	padding: 30px 50px 30px 50px;
 }
 .backNext{
 	height: 50px;
