@@ -1,7 +1,7 @@
 {
 	"case":	[
 		{
-			"question": "<label>I am a/an:<\/label>",
+			"question": "I am a/an:",
 			"input": "button",
 			"class": "btn btn-primary",
 			"id": "YYYYYY",
@@ -10,7 +10,7 @@
 			"text": ["Individual", "Property Management", "Related Person", "Business", "Attorney"]
 		},
 		{
-			"question": "<label>My name is...<\/label>",
+			"question": "My name is:",
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
@@ -19,7 +19,7 @@
 			"text": "null"
 		},
 		{
-			"question": "<label>My relationship to the property in question is as<\/label>",
+			"question": "My relationship to the property in question is as:",
 			"input": "button",
 			"class": "btn btn-primary",
 			"id": "YYYYYY",
@@ -28,7 +28,7 @@
 			"text": ["Owner", "Other"]
 		},
 		{
-			"question": "<label>I would like to evict a/an<\/label>",
+			"question": "I would like to evict a/an:",
 			"input": "button",
 			"class": "btn btn-primary",
 			"id": "YYYYYY",
@@ -37,7 +37,7 @@
 			"text": ["Individual", "Business"]
 		},
 		{
-			"question": "<label>What is the defendant's name?<\/label>", 
+			"question": "What is the defendant's name?", 
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
@@ -559,7 +559,7 @@
 			"text": ["Month-to-Month", "Other"]
 		},
 		{
-			"question": "<label>What was the frequency of tenancy?<\/label>",
+			"question": "What was the frequency of tenancy?",
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
@@ -589,7 +589,7 @@
 
 	"businessConditional": [
 		{
-			"question": "<label>The name of your business?<\/label>",
+			"question": "The name of your business?",
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",
@@ -598,7 +598,7 @@
 			"text": "null"
 		},
 		{
-			"question": "<label>What is the name of the business?<\/label>",
+			"question": "What is the name of the business?",
 			"input": "input",
 			"class": "form-control",
 			"id": "YYYYYY",

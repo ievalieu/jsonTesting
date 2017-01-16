@@ -86,7 +86,6 @@
                     $(".input").empty();
                     if(numCase < endCase){
                         event.preventDefault();
-                        $(".question").append(questionsCase[numCase].question);
                         newInputMech(numCase, questionsCase);
                         numCase++;    
                     }
@@ -99,7 +98,6 @@
 
                     if(numAttorney < endAttorney){
                         event.preventDefault();
-                        $(".question").append(questionsAttorney[numAttorney].question);
                         newInputMech(numAttorney, questionsAttorney);
                         numAttorney++;    
                     }
@@ -110,26 +108,22 @@
                     $(".input").empty();
                     if(numSent < endSent){
                         event.preventDefault();
-                        $(".question").append(questionsSentNotice[numSent].question);
                         newInputMech(numSent, questionsSentNotice);
                         numSent++;    
                     }
                 });
 
-                $(".not_sent").on("click", function changeSent() {
+                $(".not_sent").on("click", function changeNotSent() {
                     $(".question").empty();
                     $(".input").empty();
                     if(numNotSent < endNotSent){
                         event.preventDefault();
-                        $(".question").append(questionsNotSentNotice[numNotSent].question);
                         newInputMech(numNotSent, questionsNotSentNotice);
                         numNotSent++;    
                     }
                 });
-
-
-
             }); //End of getJSON
+
 
             function newInputMech(iteration, dataSubset){
 
@@ -146,8 +140,17 @@
 
             function newUserInput(i, dataSubset){
 
+                var inputQuestion = dataSubset[i].question;
                 var inputQty = dataSubset[i].placeholder;
+
+                var newLabel = $(`<label>${inputQuestion}</label>`);
+                    newLabel.attr({
+                        for: dataSubset[i].id,
+                    });
+                    $(".question").append(newLabel);
+
                 for(var z = 0; z < inputQty.length; z++){
+
                     var newInput = $("<input>");
                         newInput.attr({
                             type: dataSubset[i].type,
@@ -159,8 +162,15 @@
                 }
             };
             function newUserButton(i, dataSubset){
-
+                var btnQuestion = dataSubset[i].question;
                 var btnQty = dataSubset[i].text;
+
+                var newLabel = $(`<label>${btnQuestion}</label>`);
+                    newLabel.attr({
+                        for: dataSubset[i].id,
+                    });
+                    $(".question").append(newLabel);
+
                 for(var y = 0; y < btnQty.length; y++){
                     var newBtn = $(`<button><span> ${btnQty[y]} </span></button`);
                     newBtn.attr({
